@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @outreach.name %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @outreach.image %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @outreach.description %>
+</p>
+
+<%= link_to 'Edit', edit_outreach_path(@outreach) %> |
+<%= link_to 'Back', outreaches_path %>

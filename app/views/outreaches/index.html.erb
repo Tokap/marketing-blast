@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Outreaches</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Image</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @outreaches.each do |outreach| %>
+      <tr>
+        <td><%= outreach.name %></td>
+        <td><%= outreach.image %></td>
+        <td><%= outreach.description %></td>
+        <td><%= link_to 'Show', outreach %></td>
+        <td><%= link_to 'Edit', edit_outreach_path(outreach) %></td>
+        <td><%= link_to 'Destroy', outreach, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Outreach', new_outreach_path %>
