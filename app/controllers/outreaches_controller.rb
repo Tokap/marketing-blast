@@ -1,5 +1,6 @@
 class OutreachesController < ApplicationController
   before_action :set_outreach, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_admin!
 
   # GET /outreaches
   # GET /outreaches.json
