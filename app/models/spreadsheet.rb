@@ -1,4 +1,5 @@
 class Spreadsheet < ActiveRecord::Base
+  require 'open-uri'
 
   def spreadsheet_url
     "https://spreadsheets.google.com/feeds/list/#{identifier}/od6/public/values?alt=json"
