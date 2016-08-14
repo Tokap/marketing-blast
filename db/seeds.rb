@@ -9,3 +9,8 @@
 admin = Admin.create!(email: "AllenPatrick86@gmail.com", 
                       password: "password1204", 
                       admin_key: true)
+
+customer = Customer.create!(email: "AllenPatrick86@gmail.com", 
+                            phone: "6318382261", 
+                            first_name: "Patrick", 
+                            last_name: "Allen")

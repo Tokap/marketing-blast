@@ -4,7 +4,7 @@ class CreateCustomers < ActiveRecord::Migration
       t.string :first_name
       t.string :last_name
       t.string :phone
-      t.text :email
+      t.string :email
 
       t.timestamps null: false
     end
