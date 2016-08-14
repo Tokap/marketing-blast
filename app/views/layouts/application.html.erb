@@ -5,10 +5,21 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 <body>
+  <ul class="nav nav-pills">
+    <li role="presentation" class="active"><%=link_to "Home", root_path %></li>
+    <li role="presentation"><%=link_to "Customers" %></li>
+    <% if !admin_signed_in? %>
+      <li role="presentation"><%=link_to "Login", new_admin_session_path %></li>
+    <% end %>
+    <% if admin_signed_in? %>
+      <li role="presentation"><%=link_to "Logout", destroy_admin_session_path, method: "delete" %></li>
+    <% end %>
+  </ul>
 
-<%= yield %>
+  <%= yield %>
 
 </body>
 </html>
