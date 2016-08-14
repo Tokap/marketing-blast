@@ -3,3 +3,11 @@
 <%= render 'form' %>
 
 <%= link_to 'Back', outreaches_path %>
+
+<div>
+  <h3> Test SMS Button </h3>
+  <%= form_tag("/notifications/notify", method: "post") do %>
+    <%= submit_tag("Send Something!") %>
+  <% end %>
+
+</div>
