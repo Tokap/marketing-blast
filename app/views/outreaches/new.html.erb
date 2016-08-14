@@ -5,9 +5,19 @@
 <%= link_to 'Back', outreaches_path %>
 
 <div>
-  <h3> Test SMS Button </h3>
-  <%= form_tag("/notifications/notify", method: "post") do %>
-    <%= submit_tag("Send Something!") %>
+  <h3> All Customers SMS Button </h3>
+  <%= form_tag("/notifications/blast", method: "post") do %>
+    <%= submit_tag("Send to Everyone!") %>
   <% end %>
+</div>
 
+<div>
+  <h3> Custom SMS Button </h3><br>
+  <%= form_tag("/notifications/notify", method: "post") do %>
+    <%= label_tag(:phone, "Phone") %><br>
+    <%= text_field_tag(:phone) %><br><br>
+    <%= label_tag(:body, "Body") %><br>
+    <%= text_area_tag(:body) %><br><br>
+    <%= submit_tag("Send to customer!") %>
+  <% end %>
 </div>
