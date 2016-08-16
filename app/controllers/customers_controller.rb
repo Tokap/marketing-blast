@@ -26,11 +26,10 @@ class CustomersController < ApplicationController
   # POST /customers.json
   def create
     @customer = Customer.new(customer_params)
+    @customer.format_phone
 
     respond_to do |format|
       if @customer.save
-        @customer.format_phone
-        @customer.save
         format.html { redirect_to new_outreach_path, notice: 'Customer was successfully created.' }
         format.json { render :show, status: :created, location: new_outreach_path }
       else

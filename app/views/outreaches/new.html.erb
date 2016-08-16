@@ -1,10 +1,10 @@
 <div class="row homepage-contents">
   <div class="col-md-1">
   </div>
-  <div class="col-md-2 anchor">
+  <div class="col-md-3 anchor">
     <button class="btn-lg btn-primary center-block detail-button">New Outreach Template</button>
     <div class="feature-summary hidden">
-      <h3>New Outreach Template</h3>
+      <h3 class="text-center">New Outreach Template</h3>
       <%= render 'form' %>
 
       <a class="close-link">Close</a>
@@ -13,7 +13,7 @@
   <div class="col-md-3 anchor">
     <button class="btn-lg btn-primary center-block detail-button">New Customer</button>
     <div class="feature-summary hidden">
-      <h3>New Customer</h3>
+      <h3 class="text-center">New Customer</h3>
       <%= render 'customers/form' %>
 
       <a class="close-link">Close</a>
@@ -22,18 +22,9 @@
   </div>
 
   <div class="col-md-3 anchor">
-    <button class="btn-lg btn-primary center-block detail-button">Send Targeted Message</button>
+    <button class="btn-lg btn-primary center-block detail-button">Pending Addition</button>
     <div class="hidden feature-summary">
-      <h3>Targeted SMS</h3>
-      <%= form_tag("/notifications/notify", method: "post") do %>
-        <%= label_tag(:phone, "Phone") %><br>
-        <%= text_field_tag(:phone) %><br><br>
-        <%= label_tag(:body, "Body") %><br>
-        <%= text_area_tag(:body) %><br><br>
-        <%= label_tag(:body, "Image URL") %><br>
-        <%= text_area_tag(:media_url) %><br><br>
-        <%= submit_tag("Send to customer!", class: "btn btn-success") %>
-      <% end %>
+      <h3 class="text-center">Pending Addition</h3>
       <a class="close-link">Close</a>
     </div>
   </div>
