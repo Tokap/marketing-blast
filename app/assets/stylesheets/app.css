@@ -6,11 +6,18 @@ body#primary {
 }
 
 div.feature-summary {
-  background-image: url("backgrounds/brushed_aluminium_background.jpg");
+  /*background-image: url("backgrounds/brushed_aluminium_background.jpg");*/
+  background-color: rgb(142, 168, 176);
+  opacity: 0.95;
+  padding: 5px 0 15px 20px;
+  border-radius: 10%;
+  border: solid black 3px;
+  font-family: "Arial";    
 }
 
+
 div.homepage-contents {
-  
+  margin-top: 30px;
 }
 
 /* IMAGE NAMES TO PLAY WITH:
