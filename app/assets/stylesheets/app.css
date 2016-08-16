@@ -1,3 +1,23 @@
-html body {
-  padding-left: 5px
+body#primary {
+  padding-left: 5px;
+  background-image: url("backgrounds/white_brick.jpeg");
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
+
+div.feature-summary {
+  background-image: url("backgrounds/brushed_aluminium_background.jpg");
+}
+
+div.homepage-contents {
+  
+}
+
+/* IMAGE NAMES TO PLAY WITH:
+black_textured_background.jpg
+brushed_aluminium_background.jpg
+clean_light_blue.jpg
+white_brick.jpeg
+
+
+*/
