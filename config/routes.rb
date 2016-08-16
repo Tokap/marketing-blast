@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   post 'notifications/notify' => 'notifications#notify'
   post 'notifications/blast' => 'notifications#blast'
 
-  root 'outreaches#new'
+  root 'static#main'
 end

@@ -29,6 +29,14 @@ a.close-link:hover {
   cursor: pointer;
 }
 
+input.bl-border {
+  border: solid black 1px;
+}
+
+button.bl-border {
+  border: solid black 1px;
+}
+
 /* IMAGE NAMES TO PLAY WITH:
 black_textured_background.jpg
 brushed_aluminium_background.jpg

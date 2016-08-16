@@ -16,6 +16,7 @@ class OutreachesController < ApplicationController
   # GET /outreaches/new
   def new
     @outreach = Outreach.new
+    @customer = Customer.new
   end
 
   # GET /outreaches/1/edit
@@ -29,8 +30,8 @@ class OutreachesController < ApplicationController
 
     respond_to do |format|
       if @outreach.save
-        format.html { redirect_to @outreach, notice: 'Outreach was successfully created.' }
-        format.json { render :show, status: :created, location: @outreach }
+        format.html { redirect_to new_outreach_path, notice: 'Outreach was successfully created.' }
+        format.json { render :show, status: :created, location: new_outreach_path }
       else
         format.html { render :new }
         format.json { render json: @outreach.errors, status: :unprocessable_entity }

@@ -2,20 +2,19 @@
   <div class="col-md-1">
   </div>
   <div class="col-md-2 anchor">
-    <button class="btn-lg btn-primary center-block detail-button">New Outreach Template</button>
+    <button class="btn-lg btn-primary center-block detail-button">Awaiting Commands</button>
     <div class="feature-summary hidden">
-      <h3>New Outreach Template</h3>
-      <%= render 'form' %>
-
+      <h3>Awaiting Commands</h3>
       <a class="close-link">Close</a>
     </div>
   </div>
   <div class="col-md-3 anchor">
-    <button class="btn-lg btn-primary center-block detail-button">New Customer</button>
+    <button class="btn-lg btn-primary center-block detail-button">Send Message Blast</button>
     <div class="feature-summary hidden">
-      <h3>New Customer</h3>
-      <%= render 'customers/form' %>
-
+      <h3>All Customers SMS</h3>
+      <%= form_tag("/notifications/blast", method: "post") do %>
+        <%= submit_tag("Send to Everyone!", class: "btn btn-success bl-border") %>
+      <% end %>
       <a class="close-link">Close</a>
     </div>
 
@@ -32,7 +31,7 @@
         <%= text_area_tag(:body) %><br><br>
         <%= label_tag(:body, "Image URL") %><br>
         <%= text_area_tag(:media_url) %><br><br>
-        <%= submit_tag("Send to customer!", class: "btn btn-success") %>
+        <%= submit_tag("Send to customer!", class: "btn btn-success bl-border") %>
       <% end %>
       <a class="close-link">Close</a>
     </div>

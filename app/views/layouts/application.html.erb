@@ -10,7 +10,7 @@
 <body id="primary">
   <ul class="nav nav-pills">
     <li role="presentation" class="active"><%=link_to "Home", root_path %></li>
-    <li role="presentation"><%=link_to "New Customer", new_customer_path %></li>
+    <li role="presentation"><%=link_to "New Information", new_outreach_path %></li>
     <% if !admin_signed_in? %>
       <li role="presentation"><%=link_to "Login", new_admin_session_path %></li>
     <% end %>

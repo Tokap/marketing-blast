@@ -5,8 +5,13 @@ class NotificationsController < ApplicationController
   def notify
     phone = params[:phone]
     body = params[:body]
+    media_url = params[:media_url]
     client = Twilio::REST::Client.new Rails.application.secrets.twilio_account_sid, Rails.application.secrets.twilio_auth_token
-    message = client.messages.create from: '+18582120341', to: "+1#{phone}", body: body
+    if media_url.empty?
+      message = client.messages.create from: '+18582120341', to: "+1#{phone}", body: body
+    else
+      message = client.messages.create from: '+18582120341', to: "+1#{phone}", body: body, media_url: media_url
+    end
       # render plain: message.status (ORIGINAL SYNTAX)
     redirect_to root_path
   end
