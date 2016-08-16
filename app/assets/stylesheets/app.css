@@ -37,8 +37,8 @@ button.bl-border {
   border: solid black 1px;
 }
 
-ul.nav li:hover {
-  background-color: #BEFFCB;
+li.test {
+  background-color: #BEFFCB !important;
 }
 
 /* IMAGE NAMES TO PLAY WITH:

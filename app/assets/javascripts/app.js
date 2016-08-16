@@ -12,4 +12,12 @@ $(document).on('turbolinks:load', function(){
     $(this).closest(".anchor").find(".detail-button").removeClass("hidden");
   })
 
+  $("ul.nav li").hover(
+    function() {
+      $(this).addClass("active");
+    }, function() {
+      $( this ).removeClass("active");
+    }
+  );
+
 })
