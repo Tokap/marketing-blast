@@ -1,29 +1,31 @@
 <div class="row homepage-contents">
   <div class="col-md-1">
   </div>
-  <div class="col-md-2">
-    <button class="btn-lg btn-primary center-block">New Outreach Template</button>
+  <div class="col-md-2 anchor">
+    <button class="btn-lg btn-primary center-block detail-button">New Outreach Template</button>
     <div class="feature-summary hidden">
       <h3>New Outreach</h3>
       <%= render 'form' %>
 
-      <%= link_to 'Back', outreaches_path %>
+      <!-- <%= link_to 'Back', outreaches_path %> -->
+      <a class="close-link">Close</a>
     </div>
   </div>
-  <div class="col-md-3">
-  <button class="btn-lg btn-primary center-block">Send Message Blast</button>
+  <div class="col-md-3 anchor">
+    <button class="btn-lg btn-primary center-block detail-button">Send Message Blast</button>
     <div class="feature-summary hidden">
       <h3>All Customers SMS</h3>
       <%= form_tag("/notifications/blast", method: "post") do %>
         <%= submit_tag("Send to Everyone!", class: "btn btn-success") %>
       <% end %>
+      <a class="close-link">Close</a>
     </div>
 
   </div>
 
-  <div class="col-md-3">
-    <button class="btn-lg btn-primary center-block">Send Targeted Message</button>
-    <div class="hidden feature-details">
+  <div class="col-md-3 anchor">
+    <button class="btn-lg btn-primary center-block detail-button">Send Targeted Message</button>
+    <div class="hidden feature-summary">
       <h3>Targeted SMS</h3>
       <%= form_tag("/notifications/notify", method: "post") do %>
         <%= label_tag(:phone, "Phone") %><br>
@@ -32,6 +34,7 @@
         <%= text_area_tag(:body) %><br><br>
         <%= submit_tag("Send to customer!", class: "btn btn-success") %>
       <% end %>
+      <a class="close-link">Close</a>
     </div>
   </div>
 </div>
