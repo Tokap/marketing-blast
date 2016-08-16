@@ -1,5 +1,7 @@
 $(document).on('turbolinks:load', function(){
 
+  $("li").removeClass("active");
+
   $("div").on("click", ".detail-button", function(){
     $(this).next().removeClass("hidden")
     $(this).addClass("hidden")
@@ -11,4 +13,3 @@ $(document).on('turbolinks:load', function(){
   })
 
 })
-
