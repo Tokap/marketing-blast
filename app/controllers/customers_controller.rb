@@ -1,5 +1,6 @@
 class CustomersController < ApplicationController
   before_action :set_customer, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_admin!
 
   # GET /customers
   # GET /customers.json
@@ -25,11 +26,12 @@ class CustomersController < ApplicationController
   # POST /customers.json
   def create
     @customer = Customer.new(customer_params)
+    @customer.format_phone
 
     respond_to do |format|
       if @customer.save
-        format.html { redirect_to @customer, notice: 'Customer was successfully created.' }
-        format.json { render :show, status: :created, location: @customer }
+        format.html { redirect_to new_outreach_path, notice: 'Customer was successfully created.' }
+        format.json { render :show, status: :created, location: new_outreach_path }
       else
         format.html { render :new }
         format.json { render json: @customer.errors, status: :unprocessable_entity }
