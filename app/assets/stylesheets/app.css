@@ -3,7 +3,18 @@ body#primary {
   background-image: url("backgrounds/white_brick.jpeg");
   background-size: 100%;
   background-repeat: no-repeat;
+  font-family: 'Economica', sans-serif;
+
 }
+
+form { 
+font-family: 'Economica', sans-serif;
+ }
+
+ div.feature-summary h3 {
+  font-family: 'Economica', sans-serif;
+  font-size: 29px;
+ }
 
 div.feature-summary {
   /*background-image: url("backgrounds/brushed_aluminium_background.jpg");*/
@@ -11,10 +22,21 @@ div.feature-summary {
   opacity: 0.95;
   padding: 5px 30px 15px 30px;
   margin: 10px;
-
   border: solid black 3px;
-  font-family: "Arial";    
 }
+
+div.feature-summary a { 
+  font-size: 19px;
+}
+
+div.feature-summary input { 
+  font-size: 34px;
+}
+
+div.feature-summary label { 
+  font-size: 21px;
+}
+
 
 
 div.homepage-contents {
@@ -23,7 +45,6 @@ div.homepage-contents {
 
 a.close-link {
   margin-right: 10px;
-
 }
 
 a.close-link:hover {
