@@ -3,7 +3,18 @@ body#primary {
   background-image: url("backgrounds/white_brick.jpeg");
   background-size: 100%;
   background-repeat: no-repeat;
+  font-family: 'Economica', sans-serif;
+
 }
+
+form { 
+font-family: 'Economica', sans-serif;
+ }
+
+ div.feature-summary h3 {
+  font-family: 'Economica', sans-serif;
+  font-size: 29px;
+ }
 
 div.feature-summary {
   /*background-image: url("backgrounds/brushed_aluminium_background.jpg");*/
@@ -11,19 +22,34 @@ div.feature-summary {
   opacity: 0.95;
   padding: 5px 30px 15px 30px;
   margin: 10px;
-  border-radius: 10%;
   border: solid black 3px;
-  font-family: "Arial";    
 }
 
+div.feature-summary a.btn { 
+  font-size: 19px;
+  color: white;
+  border: solid black 1px;
+}
+
+div.feature-summary input { 
+  font-size: 34px;
+}
+
+div.feature-summary label { 
+  font-size: 21px;
+}
+
+div.feature-summary textarea { 
+  font-size: 21px;
+}
 
 div.homepage-contents {
-  margin-top: 30px;
+  margin-top: 40px;
 }
 
 a.close-link {
   margin-right: 10px;
-
+  font-size: 20px;
 }
 
 a.close-link:hover {
@@ -61,6 +87,21 @@ form textarea#body {
 form input {
   width: 100%;
 }
+
+.google-shorten-header {
+  margin-bottom: 30px;
+}
+
+button.detail-button {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+ul.nav { 
+  font-family: 'Source Code Pro', monospace;
+  font-size: 17px;
+ }
+
 
 /* IMAGE NAMES TO PLAY WITH:
 black_textured_background.jpg
