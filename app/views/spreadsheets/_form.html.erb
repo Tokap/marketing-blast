@@ -12,14 +12,14 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
+    <%= f.label :nickname %><br>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :identifier %><br>
+    <%= f.label :unique_url_ID %><br>
     <%= f.text_field :identifier %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class: "btn btn-success bl-border" %>
   </div>
 <% end %>

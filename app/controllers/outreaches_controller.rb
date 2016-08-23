@@ -17,6 +17,7 @@ class OutreachesController < ApplicationController
   def new
     @outreach = Outreach.new
     @customer = Customer.new
+    @spreadsheet = Spreadsheet.new
   end
 
   # GET /outreaches/1/edit
