@@ -1,13 +1,6 @@
 <div class="row homepage-contents">
 
-  <div class="col-md-4 anchor">
-    <button class="btn-lg btn-primary center-block detail-button">Shorten Link for Body</button>
-    <div class="feature-summary hidden center-block">
-      <h3 class="text-center google-shorten-header">Shortened Link for Body</h3>
-      <a href="https://goo.gl/" target="_blank" class= "btn btn-success center-block">Open Google url tracking in new tab</a><br><br>
-      <a class="close-link">Close</a>
-    </div>
-  </div>
+
   <div class="col-md-4 anchor">
     <button class="btn-lg btn-primary center-block detail-button">Send Message Blast</button>
     <div class="feature-summary hidden center-block">
@@ -41,6 +34,23 @@
         <%= submit_tag("Send to customer!", class: "btn btn-success bl-border") %>
       <% end %>
       <br>
+      <a class="close-link">Close</a>
+    </div>
+  </div>
+
+  <div class="col-md-4 anchor">
+    <button class="btn-lg btn-primary center-block detail-button">Support Options</button>
+    <div class="feature-summary hidden center-block">
+      <h3 class="text-center google-shorten-header">Shorten Link for Body</h3>
+      <a href="https://goo.gl/" target="_blank" class= "btn btn-success center-block">Open Google url tracking in new tab</a><br><br>
+
+
+      <form>
+        <h3 class="text-center">Select Spreadsheet and upload</h3>
+        <%= collection_select(:spreadsheet, :identifier, @spreadsheets, :id, :identifier, {:prompt => true}) %>
+        <input type="submit" class="btn btn-success center-block" value="Upload Customer Data">
+      </form>
+
       <a class="close-link">Close</a>
     </div>
   </div>
