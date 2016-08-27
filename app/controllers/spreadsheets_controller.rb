@@ -40,15 +40,20 @@ class SpreadsheetsController < ApplicationController
   # PATCH/PUT /spreadsheets/1
   # PATCH/PUT /spreadsheets/1.json
   def update
-    respond_to do |format|
-      if @spreadsheet.update(spreadsheet_params)
-        format.html { redirect_to @spreadsheet, notice: 'Spreadsheet was successfully updated.' }
-        format.json { render :show, status: :ok, location: @spreadsheet }
-      else
-        format.html { render :edit }
-        format.json { render json: @spreadsheet.errors, status: :unprocessable_entity }
-      end
-    end
+    @spreadsheet = Spreadsheet.find(params[:spreadsheet_id])
+    @spreadsheet.add_to_customer_list
+    #add a response
+
+
+    # respond_to do |format|
+    #   if @spreadsheet.update(spreadsheet_params)
+    #     format.html { redirect_to @spreadsheet, notice: 'Spreadsheet was successfully updated.' }
+    #     format.json { render :show, status: :ok, location: @spreadsheet }
+    #   else
+    #     format.html { render :edit }
+    #     format.json { render json: @spreadsheet.errors, status: :unprocessable_entity }
+    #   end
+    # end
   end
 
   # DELETE /spreadsheets/1
