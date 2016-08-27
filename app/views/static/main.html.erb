@@ -42,14 +42,15 @@
     <button class="btn-lg btn-primary center-block detail-button">Support Options</button>
     <div class="feature-summary hidden center-block">
       <h3 class="text-center google-shorten-header">Shorten Link for Body</h3>
-      <a href="https://goo.gl/" target="_blank" class= "btn btn-success center-block">Open Google url tracking in new tab</a><br><br>
+      <a href="https://goo.gl/" target="_blank" class= "btn btn-success center-block">Open Google url tracking in new tab</a><br>
 
 
       <form>
-        <h3 class="text-center">Select Spreadsheet and upload</h3>
+        <h3 class="text-center">Select Spreadsheet to Upload Customer Data</h3><br>
         <%= collection_select(:spreadsheet, :identifier, @spreadsheets, :id, :identifier, {:prompt => true}) %>
-        <input type="submit" class="btn btn-success center-block" value="Upload Customer Data">
-      </form>
+        <br><br>
+        <input type="submit" class="btn btn-success center-block customer-data-upload" value="Upload Customer Data">
+      </form><br>
 
       <a class="close-link">Close</a>
     </div>
