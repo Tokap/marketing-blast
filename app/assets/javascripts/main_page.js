@@ -16,10 +16,14 @@ $(document).on('turbolinks:load', function(){
           dataType: 'JSON'
         });
 
-    //TODO: Refine process to handle errors and success
-    request.always(function(){
+    request.done(function(){
       alert("Upload complete!")
     })
+
+    request.fail(function(){
+      alert("Uh oh! Something went wrong. Check the spreadsheet data and try again.")
+    })
+
   });
 
 })
