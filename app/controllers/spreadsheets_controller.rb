@@ -40,15 +40,14 @@ class SpreadsheetsController < ApplicationController
   # PATCH/PUT /spreadsheets/1
   # PATCH/PUT /spreadsheets/1.json
   def update
+    #TODO: add a response for errors
+    #TODO: add method to prevent duplicate client entry
+    @spreadsheet = Spreadsheet.find(params[:id])
+    @spreadsheet.add_to_customer_list
       respond_to do |format|
         format.html { redirect_to "/", notice: 'Customers Uploaded.' }
-        format.json { p params }
+        format.json { render :show, status: :ok }
       end
-
-    # @spreadsheet = Spreadsheet.find(params[:spreadsheet_id])
-    # @spreadsheet.add_to_customer_list
-    #add a response
-
 
     # respond_to do |format|
     #   if @spreadsheet.update(spreadsheet_params)
