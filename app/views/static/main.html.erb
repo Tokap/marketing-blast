@@ -44,13 +44,13 @@
       <h3 class="text-center google-shorten-header">Shorten Link for Body</h3>
       <a href="https://goo.gl/" target="_blank" class= "btn btn-success center-block">Open Google url tracking in new tab</a><br>
 
-
-      <form>
         <h3 class="text-center">Select Spreadsheet to Upload Customer Data</h3><br>
+      <%= form_tag("/spreadsheets/", class: "spreadsheet-upload-form", method: "put") do %>
         <%= collection_select(:spreadsheet, :identifier, @spreadsheets, :id, :identifier, {:prompt => true}) %>
         <br><br>
-        <input type="submit" class="btn btn-success center-block customer-data-upload" value="Upload Customer Data">
-      </form><br>
+        <%= submit_tag("Upload Customer Data", class: "btn btn-success center-block customer-data-upload") %>
+      <% end %>
+        <br>
 
       <a class="close-link">Close</a>
     </div>

@@ -40,8 +40,13 @@ class SpreadsheetsController < ApplicationController
   # PATCH/PUT /spreadsheets/1
   # PATCH/PUT /spreadsheets/1.json
   def update
-    @spreadsheet = Spreadsheet.find(params[:spreadsheet_id])
-    @spreadsheet.add_to_customer_list
+      respond_to do |format|
+        format.html { redirect_to "/", notice: 'Customers Uploaded.' }
+        format.json { p params }
+      end
+
+    # @spreadsheet = Spreadsheet.find(params[:spreadsheet_id])
+    # @spreadsheet.add_to_customer_list
     #add a response
 
 
