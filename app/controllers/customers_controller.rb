@@ -6,6 +6,8 @@ class CustomersController < ApplicationController
   # GET /customers.json
   def index
     @customers = Customer.all
+    @outreaches = Outreach.all
+    @spreadsheets = Spreadsheet.all
   end
 
   # GET /customers/1

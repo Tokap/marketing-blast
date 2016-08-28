@@ -40,15 +40,24 @@ class SpreadsheetsController < ApplicationController
   # PATCH/PUT /spreadsheets/1
   # PATCH/PUT /spreadsheets/1.json
   def update
-    respond_to do |format|
-      if @spreadsheet.update(spreadsheet_params)
-        format.html { redirect_to @spreadsheet, notice: 'Spreadsheet was successfully updated.' }
-        format.json { render :show, status: :ok, location: @spreadsheet }
-      else
-        format.html { render :edit }
-        format.json { render json: @spreadsheet.errors, status: :unprocessable_entity }
+    #TODO: add a response for errors
+    #TODO: add method to prevent duplicate client entry
+    @spreadsheet = Spreadsheet.find(params[:id])
+    @spreadsheet.add_to_customer_list
+      respond_to do |format|
+        format.html { redirect_to "/", notice: 'Customers Uploaded.' }
+        format.json { render :show, status: :ok }
       end
-    end
+
+    # respond_to do |format|
+    #   if @spreadsheet.update(spreadsheet_params)
+    #     format.html { redirect_to @spreadsheet, notice: 'Spreadsheet was successfully updated.' }
+    #     format.json { render :show, status: :ok, location: @spreadsheet }
+    #   else
+    #     format.html { render :edit }
+    #     format.json { render json: @spreadsheet.errors, status: :unprocessable_entity }
+    #   end
+    # end
   end
 
   # DELETE /spreadsheets/1
