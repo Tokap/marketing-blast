@@ -16,6 +16,7 @@ $(document).on('turbolinks:load', function(){
           dataType: 'JSON'
         });
 
+    //TODO: Refine process to handle errors and success
     request.always(function(){
       alert("Upload complete!")
     })
