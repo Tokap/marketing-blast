@@ -126,7 +126,17 @@ input.customer-data-upload {
   border: solid black 1px;
 }
 
+div.text-center {
+  text-align: center;
+  background-color: rgb(142, 168, 176);
+  border: solid black 1px;
+  padding-bottom: 20px;
+}
 
+div.text-center td, div.text-center th {
+  font-size: 14px;
+  text-align: left;
+}
 /* IMAGE NAMES TO PLAY WITH:
 black_textured_background.jpg
 brushed_aluminium_background.jpg
