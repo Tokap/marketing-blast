@@ -17,7 +17,7 @@ $(document).on('turbolinks:load', function(){
         });
 
     request.done(function(){
-      alert("Upload complete!")
+      alert("Spreadsheet upload complete!")
     })
 
     request.fail(function(){

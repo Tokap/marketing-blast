@@ -122,6 +122,10 @@ body#primary:after {
   background-size: cover;
 }
 
+input.customer-data-upload {
+  border: solid black 1px;
+}
+
 
 /* IMAGE NAMES TO PLAY WITH:
 black_textured_background.jpg
