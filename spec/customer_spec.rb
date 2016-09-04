@@ -27,11 +27,11 @@ let(:customer) { Customer.new(id: 20, first_name: "John", last_name: "Smith", ph
   end
 
   describe "Gets initialized with basic attributes" do
-    # customer.phone = "5558675309"
+    let(:format_test) { Customer.new(id: 25, first_name: "John", last_name: "Smith", phone: "5558675309", email: "johnwsmith@fake.gmail.com")}
     it "has an email address" do
-      expect(customer.phone).to eq("5558675309")
-      customer.format_phone
-      expect(customer.phone).to eq("+15558675309")
+      expect(format_test.phone).to eq("5558675309")
+      format_test.format_phone
+      expect(format_test.phone).to eq("+15558675309")
     end
   end
 end
