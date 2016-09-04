@@ -1,26 +1,6 @@
 class SpreadsheetsController < ApplicationController
   before_action :set_spreadsheet, only: [:show, :edit, :update, :destroy]
 
-  # GET /spreadsheets
-  # GET /spreadsheets.json
-  def index
-    @spreadsheets = Spreadsheet.all
-  end
-
-  # GET /spreadsheets/1
-  # GET /spreadsheets/1.json
-  def show
-  end
-
-  # GET /spreadsheets/new
-  def new
-    @spreadsheet = Spreadsheet.new
-  end
-
-  # GET /spreadsheets/1/edit
-  def edit
-  end
-
   # POST /spreadsheets
   # POST /spreadsheets.json
   def create
@@ -44,20 +24,10 @@ class SpreadsheetsController < ApplicationController
     #TODO: add method to prevent duplicate client entry
     @spreadsheet = Spreadsheet.find(params[:id])
     @spreadsheet.add_to_customer_list
-      respond_to do |format|
-        format.html { redirect_to "/", notice: 'Customers Uploaded.' }
-        format.json { render :show, status: :ok }
-      end
-
-    # respond_to do |format|
-    #   if @spreadsheet.update(spreadsheet_params)
-    #     format.html { redirect_to @spreadsheet, notice: 'Spreadsheet was successfully updated.' }
-    #     format.json { render :show, status: :ok, location: @spreadsheet }
-    #   else
-    #     format.html { render :edit }
-    #     format.json { render json: @spreadsheet.errors, status: :unprocessable_entity }
-    #   end
-    # end
+    respond_to do |format|
+      format.html { redirect_to "/", notice: 'Customers Uploaded.' }
+      format.json { render :show, status: :ok }
+    end
   end
 
   # DELETE /spreadsheets/1
