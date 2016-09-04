@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  resources :spreadsheets, except: [:new, :show]
-  resources :customers, except: [:new, :show]
-  resources :outreaches, except: [:new]
+  resources :spreadsheets, except: [:new, :show, :edit, :index]
+  resources :customers, except: [:new, :show, :index]
+  resources :outreaches, except: [:new, :index]
 
   devise_for :admins
   
