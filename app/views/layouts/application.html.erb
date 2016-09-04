@@ -12,8 +12,8 @@
 <body id="primary">
   <ul class="nav nav-pills navbar-collapse">
     <li role="presentation" class="active"><%=link_to "Home", root_path %></li>
-    <li role="presentation"><%=link_to "New Information", new_outreach_path %></li>
-    <li role="presentation"><%=link_to "Review Data", customers_path %></li>
+    <li role="presentation"><%=link_to "New Information", manage_path %></li>
+    <li role="presentation"><%=link_to "Review Data", information_path %></li>
     <% if !admin_signed_in? %>
       <li role="presentation"><%=link_to "Login", new_admin_session_path %></li>
     <% end %>
