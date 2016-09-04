@@ -6,5 +6,7 @@ Rails.application.routes.draw do
   post 'notifications/notify' => 'notifications#notify'
   post 'notifications/blast' => 'notifications#blast'
 
+  get "/information" => "static#information"
+
   root 'static#main'
 end
