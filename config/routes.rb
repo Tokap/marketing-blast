@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   post 'notifications/notify' => 'notifications#notify'
   post 'notifications/blast' => 'notifications#blast'
 
-  get "/information" => "static#information"
+  get "/review" => "static#review"
   get "/manage" => "static#manage"
 
   root 'static#main'

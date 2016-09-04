@@ -4,7 +4,7 @@ class StaticController < ApplicationController
     @spreadsheets = Spreadsheet.all
   end
 
-  def information
+  def review
     @customers = Customer.all
     @outreaches = Outreach.all
     @spreadsheets = Spreadsheet.all
